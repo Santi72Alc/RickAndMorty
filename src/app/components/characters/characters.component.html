@@ -1,0 +1,24 @@
+<app-info [info]="infoCharacters" (onChangePage)="onChangePage($event)"></app-info>
+
+<div class="profile">
+  <app-profile [profile]="profileToShow"></app-profile>
+</div>
+<hr>
+
+<h2 class="text-center bg-dark text-white">Characters</h2>
+
+<div class="characters">
+  <div class="character" *ngFor="let character of arrCharacters" (click)="onSelectCharacter(character)">
+    <h4 class="text-center">{{ character?.name }}</h4>
+    <img [src]="character?.image" />
+    <div class="info">
+      <i class="bi" [ngClass]="{
+            'bi-bookmark-heart-fill text-success': character?.status === 'Alive', 
+            'bi-bookmark-x-fill text-danger': character?.status === 'Dead',
+            'bi-question-square-fill': character?.status === 'unknown'
+        }"></i>
+      <p>Specie: <em>{{ character?.species }}</em></p>
+    </div>
+  </div>
+  
+</div>

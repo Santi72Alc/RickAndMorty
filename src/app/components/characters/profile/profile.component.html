@@ -1,0 +1,53 @@
+<h1 class="bg-info text-center w-75 mx-auto" >{{profile?.name}}</h1>
+<!-- 
+<div class="profile-container">
+  <div class="profile">
+    <img [src]="profile?.image" alt="" />
+    <div class="info">
+      <h1>{{ profi
+          le?.name }}</h1>
+      <p>Especie: {{ profile?.species }}</p>
+      <p>Viene de {{ profile?.location?.name }}</p>
+      <h1>
+        Estado:
+        <span
+          [ngClass]="{
+            'text-success': profile?.status === 'Alive',
+            'text-danger': profile?.status === 'Dead',
+            'text-warning': profile?.status === 'unknown'
+          }"
+          >{{ estados[profile?.status || "unknown"] }}</span
+        >
+      </h1>
+    </div>
+  </div>
+</div>
+ -->
+
+
+ <div class="card mx-auto">
+     <div class="row g-0">
+         <div class="col-md-4 text-center">
+            <img [src]="profile?.image" class="img-fluid rounded-start" />
+         </div>
+         <div class="col-md-8">
+
+             <div class="card-body">
+                 <div class="card-title">
+                    Estado:
+                    <span class="badge"
+                      [ngClass]="{
+                        'bg-success': profile?.status === 'Alive',
+                        'bg-dark': profile?.status === 'Dead',
+                        'bg-warning text-dark': profile?.status === 'unknown'
+                      }"
+                      >{{ estados[profile?.status || "unknown"] }}</span
+                    >
+                 </div>
+                 <p class="card-text">Especie: {{ profile?.species }}</p>
+                 <p class="card-text">Viene de {{ profile?.location?.name }}</p>
+             </div>
+
+         </div>
+     </div>
+ </div>

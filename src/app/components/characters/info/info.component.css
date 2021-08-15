@@ -1,0 +1,15 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.info .controles {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 10px; */
+}
+
+.info .controles button {
+  margin-right: 5px;
+}

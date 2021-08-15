@@ -1,0 +1,22 @@
+<div class="info">
+  <h3>
+    Tot. personajes: <strong>{{ info?.count }}</strong>
+  </h3>
+  <h3>
+    Página <strong>{{ page }}</strong> de <strong>{{ info?.pages }}</strong>
+  </h3>
+  <div class="controles">
+    <button class="btn btn-primary" (click)="irInicio()" [disabled]="isPrimeraPagina">
+      Primera
+    </button>
+    <button class="btn btn-primary" (click)="irAnterior()" [disabled]="isPrimeraPagina">
+      Anterior
+    </button>
+    <button class="btn btn-primary" (click)="irSiguiente()" [disabled]="isUltimaPagina">
+      Siguiente
+    </button>
+    <button class="btn btn-primary" (click)="irUltima()" [disabled]="isUltimaPagina">
+      Última
+    </button>
+  </div>
+</div>

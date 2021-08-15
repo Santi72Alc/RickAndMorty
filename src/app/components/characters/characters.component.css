@@ -1,0 +1,35 @@
+.characters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  height: 400px;
+}
+
+.character {
+  width: 200px;
+  border: 1px solid gray;
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
+}
+
+.info i {
+    margin-right: 10px;
+}
+
+.character img {
+  width: 100%;
+}
+
+i {
+  font-size: 30px;
+}

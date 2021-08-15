@@ -1,0 +1,11 @@
+h1 {
+    height: 3.2rem;
+}
+
+.card {
+    max-width: 600px;
+}
+
+.card img {
+    height: 100%;
+}
