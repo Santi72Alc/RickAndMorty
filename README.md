@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
+
+Se ha aprendido a generar y usar servicios para captura de datos externos a la app, consiguiendo con ello que el acceso a los datos desde la app sea inpendiente de la fuente de los mismos, sólo necesitando saber y usar los métodos que nos ofrece el servicio.
+
+El uso de la API nos permite hacer uso de paginaciones y lecturas parciales de los datos, ahorrando así datos en la información traída de la misma.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
