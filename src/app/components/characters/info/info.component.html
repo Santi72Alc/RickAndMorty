@@ -1,22 +1,42 @@
 <div class="info">
-  <h3>
-    Tot. personajes: <strong>{{ info?.count }}</strong>
-  </h3>
-  <h3>
-    Página <strong>{{ page }}</strong> de <strong>{{ info?.pages }}</strong>
-  </h3>
-  <div class="controles">
-    <button class="btn btn-primary" (click)="irInicio()" [disabled]="isPrimeraPagina">
-      Primera
-    </button>
-    <button class="btn btn-primary" (click)="irAnterior()" [disabled]="isPrimeraPagina">
-      Anterior
-    </button>
-    <button class="btn btn-primary" (click)="irSiguiente()" [disabled]="isUltimaPagina">
-      Siguiente
-    </button>
-    <button class="btn btn-primary" (click)="irUltima()" [disabled]="isUltimaPagina">
-      Última
-    </button>
+  <div class="row">
+    <div class="col d-flex flex-column text-center text-md-start">
+      <h3>
+        Tot. personajes: <strong>{{ info?.count }}</strong>
+      </h3>
+      <h3>
+        Página <strong>{{ page }}</strong> de <strong>{{ info?.pages }}</strong>
+      </h3>
+    </div>
+    <div class="col hstack gap-3 justify-content-center my-3">
+      <button
+        class="btn btn-primary"
+        (click)="irInicio()"
+        [disabled]="isPrimeraPagina"
+      >
+        Primera
+      </button>
+      <button
+        class="btn btn-primary"
+        (click)="irAnterior()"
+        [disabled]="isPrimeraPagina"
+      >
+        Anterior
+      </button>
+      <button
+        class="btn btn-primary"
+        (click)="irSiguiente()"
+        [disabled]="isUltimaPagina"
+      >
+        Siguiente
+      </button>
+      <button
+        class="btn btn-primary"
+        (click)="irUltima()"
+        [disabled]="isUltimaPagina"
+      >
+        Última
+      </button>
+    </div>
   </div>
 </div>
