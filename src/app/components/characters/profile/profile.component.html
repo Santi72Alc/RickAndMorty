@@ -25,7 +25,7 @@
  -->
 
 
- <div class="card mx-auto">
+ <div class="card mx-auto shadow">
      <div class="row g-0">
          <div class="col-md-4 text-center">
             <img [src]="profile?.image" class="img-fluid rounded-start" />
@@ -38,7 +38,7 @@
                     <span class="badge"
                       [ngClass]="{
                         'bg-success': profile?.status === 'Alive',
-                        'bg-dark': profile?.status === 'Dead',
+                        'bg-danger': profile?.status === 'Dead',
                         'bg-warning text-dark': profile?.status === 'unknown'
                       }"
                       >{{ estados[profile?.status || "unknown"] }}</span
