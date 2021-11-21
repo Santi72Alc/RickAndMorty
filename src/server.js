@@ -1,14 +1,13 @@
-const express = require("express")
-const path = require("path")
+const express = require("express");
+const path = require("path");
 
-const app = express()
+const app = express();
 
-app.use(express.static("./dist/RickAndMorty"))
+app.use(express.static(__dirname() + "/RickAndMorty"));
 
-app.get("/*", (req, res) => res.sendFile("index.html", {
-    root: "dist/RickAndMorty/"
-}))
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname(), "RickAndMorty", "index.html"));
+});
 
-const port = process.env.PORT || 8080
-
-app.listen(port)
+const port = process.env.PORT || 8080;
+app.listen(port);
